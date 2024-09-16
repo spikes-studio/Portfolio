@@ -1,4 +1,3 @@
-
 // Scene, Camera, and Renderer Setup
 let scene, camera, renderer, cube, sphere, torus, controls;
 
@@ -11,10 +10,10 @@ function init() {
     camera.position.z = 10;
 
     // Create a WebGL renderer
-    renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#heroCanvas'), alpha: true });
+    const canvas = document.querySelector('#heroCanvas');
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
+    
     // Add ambient light
     const ambientLight = new THREE.AmbientLight(0x404040, 2);
     scene.add(ambientLight);
@@ -29,6 +28,8 @@ function init() {
     const cubeMaterial = new THREE.MeshStandardMaterial({ color: 0x007bff });
     cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
     scene.add(cube);
+
+    // Create a Sphere
     const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
     const sphereMaterial = new THREE.MeshStandardMaterial({ color: 0xff5733 });
     sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
@@ -65,10 +66,8 @@ function animate(composer) {
     // Rotate cube, sphere, and torus
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
-
     sphere.rotation.x += 0.01;
     sphere.rotation.y += 0.01;
-
     torus.rotation.x += 0.01;
     torus.rotation.y += 0.01;
 
@@ -132,6 +131,3 @@ window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     pointLight.intensity = (scrollY / window.innerHeight) * 2;
 });
-
-    
-
