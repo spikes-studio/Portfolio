@@ -1,0 +1,170 @@
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 2rem;
+}
+
+header nav a {
+    color: #333;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #007bff;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.hero-image {
+    width: 500px;
+    height: 500px;
+}
+
+#about, #work, #contact {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+#work .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project-details {
+    padding: 2rem;
+    text-align: center;
+}
+
+#contact {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contact-form textarea {
+    grid-column: 1 / -1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
